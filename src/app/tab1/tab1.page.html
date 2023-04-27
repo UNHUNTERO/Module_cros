@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Модуль з Крос-Платформи
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-card>
+        <ion-card-header>
+            <ion-title size="large">Завдання</ion-title>
+              <p>
+                  Побудувати ієрархію класів, яка буду включати інтерфейси та написати крос-платформну програму для вирішення наступної задачі(використовувати фреймворк Ionic). Ієрархію класів побудувати з використанням принципу High Cohesion + Low Coupling та SOLID.  
+                  ля учеників середньої школи необхідно розробити застосування для вивчення геометрії та планіметрії. Для трьовимірних тіл необхідно розраховувати площину та об‘єм для двовимірних площину та периметр та для тих для яких це можливо радіус вписаної та описаної окружностей. Тривимірні тіла – трикутна піраміда, куб. Двовимірні - прямокутний трикутник.  Створити поліморфний контейнер для їх виведення( як мінімум 3 елемента). Результати розрахунків необхідно виводити на екран.
+              </p>
+        </ion-card-header>
+        <ion-card-content>
+          <p>3д фігури<p>
+          <ion-button (click)="ras3D()">Розрахунок 3д фігур</ion-button>
+          <p *ngFor = "let fig of figure3d">{{fig.show()}}</p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <p>2д фігури<p>
+        <ion-button (click)="ras2D()">Розрахунок 2д фігур</ion-button>
+        <p *ngFor = "let fig of figure2d">{{fig.show()}}</p>
+      </ion-card-content>
+  </ion-card>
 </ion-content>
